@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SportMemorySkeleton</string>
+
+    <string name="menu_play">Play</string>
+    <string name="menu_high_scores">High Scores</string>
+    <string name="menu_collection">Collection</string>
+    <string name="menu_about">About</string>
+    <string name="menu_exit">Exit</string>
+
+    <string name="high_scores_title">High Scores</string>
+    <string name="collection_title">Collection</string>
+
+    <string name="dialog_exit_title">Exit Confirmation</string>
+    <string name="dialog_exit_message">Are you sure you want to go back? Your current progress will be lost.</string>
+
+    <string name="dialog_clear_scores_title">Clear High Scores</string>
+    <string name="dialog_clear_scores_message">Are you sure you want to delete all high scores? This action cannot be undone.</string>
+
+    <string name="dialog_action_confirm">Yes</string>
+    <string name="dialog_action_cancel">Cancel</string>
+
+    <string name="action_clear">Clear</string>
+    <string name="action_back">Back</string>
+
+    <string name="high_score_sort_by_score">By score</string>
+    <string name="high_score_sort_by_date">By date</string>
+    <string name="high_score_points_format">Score: %1$d</string>
+    <string name="high_scores_empty">No high scores yet. Play a game to set a record!</string>
+    <string name="preparation_ready">Ready?</string>
+</resources>
