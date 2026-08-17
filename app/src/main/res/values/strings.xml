@@ -3,12 +3,10 @@
 
     <string name="menu_play">Play</string>
     <string name="menu_high_scores">High Scores</string>
-    <string name="menu_collection">Collection</string>
     <string name="menu_about">About</string>
     <string name="menu_exit">Exit</string>
 
     <string name="high_scores_title">High Scores</string>
-    <string name="collection_title">Collection</string>
 
     <string name="dialog_exit_title">Exit Confirmation</string>
     <string name="dialog_exit_message">Are you sure you want to go back? Your current progress will be lost.</string>

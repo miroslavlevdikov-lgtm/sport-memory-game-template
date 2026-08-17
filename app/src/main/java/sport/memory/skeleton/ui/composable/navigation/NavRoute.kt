@@ -20,7 +20,4 @@ sealed class NavRoute {
 
     @Serializable
     object HighScores : NavRoute()
-
-    @Serializable
-    object Collection : NavRoute()
 }

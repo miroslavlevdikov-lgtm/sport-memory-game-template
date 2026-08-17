@@ -5,6 +5,5 @@ import androidx.annotation.DrawableRes
 data class PrefixMemoryCard(
     val id: Int,
     val name: String,
-    val shortDescription: String,
     @field:DrawableRes val image: Int,
 )

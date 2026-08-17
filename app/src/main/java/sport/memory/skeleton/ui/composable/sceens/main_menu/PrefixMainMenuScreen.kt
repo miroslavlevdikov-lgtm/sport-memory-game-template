@@ -7,8 +7,7 @@ fun PrefixMainMenuScreen(
     onGameScreenNavigation: () -> Unit,
     onAboutScreenNavigation: () -> Unit,
     onHighScoresScreenNavigation: () -> Unit,
-    onCollectionScreenNavigation: () -> Unit,
     onExit: () -> Unit,
 ) {
-    //[@AGENT][Main menu screen. Display app logo with title at the top, followed by navigation buttons for Play, High Scores, Collection, About, and Exit.]
+    //[@AGENT][Main menu screen. Display app logo with title at the top, followed by navigation buttons for Play, High Scores, About, and Exit.]
 }

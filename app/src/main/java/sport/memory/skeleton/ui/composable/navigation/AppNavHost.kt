@@ -8,7 +8,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import sport.memory.skeleton.ui.composable.sceens.about.PrefixAboutScreen
-import sport.memory.skeleton.ui.composable.sceens.collection.PrefixCollectionScreen
 import sport.memory.skeleton.ui.composable.sceens.game.PrefixGameScreen
 import sport.memory.skeleton.ui.composable.sceens.game_over.PrefixGameOverScreen
 import sport.memory.skeleton.ui.composable.sceens.high_scores.PrefixHighScoresScreen
@@ -45,7 +44,6 @@ fun AppNavHost(
                 onGameScreenNavigation = { navController.navigate(route = NavRoute.Game) },
                 onAboutScreenNavigation = { navController.navigate(route = NavRoute.About) },
                 onHighScoresScreenNavigation = { navController.navigate(route = NavRoute.HighScores) },
-                onCollectionScreenNavigation = { navController.navigate(route = NavRoute.Collection) },
                 onExit = { activity?.finishAffinity() }
             )
         }
@@ -90,10 +88,6 @@ fun AppNavHost(
 
         composable<NavRoute.HighScores> {
             PrefixHighScoresScreen(onBackClick = { navController.popBackStack() })
-        }
-
-        composable<NavRoute.Collection> {
-            PrefixCollectionScreen(onBackClick = { navController.popBackStack() })
         }
     }
 }
