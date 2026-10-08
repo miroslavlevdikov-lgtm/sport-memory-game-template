@@ -9,13 +9,15 @@ val viewModule = module {
     viewModel {
         PrefixGameViewModel(
             memoryCardRepository = get(),
-            highScoreRepository = get()
+            highScoreRepository = get(),
+            dispatchers = get()
         )
     }
 
     viewModel {
         PrefixHighScoreViewModel(
-            highScoreRepository = get()
+            highScoreRepository = get(),
+            dispatchers = get()
         )
     }
 }

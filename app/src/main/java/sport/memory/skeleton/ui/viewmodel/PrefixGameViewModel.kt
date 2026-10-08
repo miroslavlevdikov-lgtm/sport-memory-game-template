@@ -14,6 +14,7 @@ import sport.memory.skeleton.data.entity.PrefixHighScore
 import sport.memory.skeleton.data.model.PrefixMemoryCard
 import sport.memory.skeleton.data.repository.PrefixHighScoreRepository
 import sport.memory.skeleton.data.repository.PrefixMemoryCardRepository
+import sport.memory.skeleton.di.DispatcherProvider
 import sport.memory.skeleton.ui.state.DisplayedContentState
 import sport.memory.skeleton.ui.state.MemoryGameUiState
 import java.time.LocalDateTime
@@ -21,6 +22,7 @@ import java.time.LocalDateTime
 class PrefixGameViewModel(
     private val memoryCardRepository: PrefixMemoryCardRepository,
     private val highScoreRepository: PrefixHighScoreRepository,
+    private val dispatchers: DispatcherProvider,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(MemoryGameUiState())
@@ -37,7 +39,7 @@ class PrefixGameViewModel(
 
     fun startNewGame() {
         gameJob?.cancel()
-        gameJob = viewModelScope.launch {
+        gameJob = viewModelScope.launch(dispatchers.main) {
             _uiState.update {
                 MemoryGameUiState(isLoading = true)
             }
@@ -102,7 +104,7 @@ class PrefixGameViewModel(
 
         if (gameJob?.isActive == true) return
 
-        gameJob = viewModelScope.launch {
+        gameJob = viewModelScope.launch(dispatchers.main) {
             val cardNumber = currentState.deck.indexOfFirst { it.id == card.id } + 1
 
             _uiState.update {

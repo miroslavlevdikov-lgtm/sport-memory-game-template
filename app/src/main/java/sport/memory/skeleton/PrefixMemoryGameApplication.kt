@@ -5,13 +5,14 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
 import sport.memory.skeleton.di.dataModule
+import sport.memory.skeleton.di.dispatcherModule
 import sport.memory.skeleton.di.viewModule
 
 class PrefixMemoryGameApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        val appModules = dataModule + viewModule
+        val appModules = dispatcherModule + dataModule + viewModule
 
         startKoin {
             androidLogger()
